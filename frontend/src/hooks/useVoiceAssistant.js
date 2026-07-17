@@ -17,7 +17,11 @@ import { useEffect, useRef, useState } from "react";
 
 // In production (Vercel), this points to the Railway backend URL.
 // In dev, it's empty so the Vite proxy handles it.
-const API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
+let apiBaseUrl = import.meta.env.VITE_API_URL || "";
+if (apiBaseUrl && !/^https?:\/\//i.test(apiBaseUrl) && !apiBaseUrl.startsWith("//")) {
+  apiBaseUrl = "https://" + apiBaseUrl;
+}
+const API_BASE = apiBaseUrl.replace(/\/+$/, "");
 
 const FILLERS = [
   "Hmm, good question. Let me think.",
