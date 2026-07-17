@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -m pip install -q fastapi uvicorn httpx python-dotenv)",
+      "PowerShell(python -c \"import server; print\\('server.py imports OK'\\)\")",
+      "PowerShell(Start-Process python -ArgumentList \"-m\",\"uvicorn\",\"server:app\",\"--port\",\"8000\" -WorkingDirectory \"c:\\\\DEVELOPMENT\\\\real-time, audio-in\" -WindowStyle Hidden; Start-Sleep -Seconds 4; $page = Invoke-WebRequest -Uri \"http://localhost:8000/\" -UseBasicParsing; \"PAGE STATUS: $\\($page.StatusCode\\)\"; $body = '{\"messages\":[{\"role\":\"user\",\"content\":\"hello\"}]}'; $chat = Invoke-WebRequest -Uri \"http://localhost:8000/chat\" -Method Post -Body $body -ContentType \"application/json\" -UseBasicParsing; \"CHAT RESPONSE: $\\($chat.Content\\)\")",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(npm create vite@latest frontend -- --template react)",
+      "PowerShell(Remove-Item \"c:\\\\DEVELOPMENT\\\\real-time, audio-in\\\\frontend\\\\src\\\\App.css\" -Confirm:$false)",
+      "PowerShell(Get-ChildItem \"c:\\\\DEVELOPMENT\\\\real-time, audio-in\\\\frontend\" -Recurse -File | Where-Object { $_.FullName -notmatch 'node_modules' } | Select-Object -ExpandProperty FullName)",
+      "PowerShell(Remove-Item -Recurse -Force \"c:\\\\DEVELOPMENT\\\\real-time, audio-in\\\\static\" -Confirm:$false; $conn = Get-NetTCPConnection -LocalPort 8000 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { Stop-Process -Id $conn[0].OwningProcess -Force -Confirm:$false; \"old server stopped\" } else { \"no server running\" })",
+      "PowerShell(Start-Process python -ArgumentList \"-m\",\"uvicorn\",\"server:app\",\"--port\",\"8000\" -WorkingDirectory \"c:\\\\DEVELOPMENT\\\\real-time, audio-in\" -WindowStyle Hidden; Start-Sleep -Seconds 4; $page = Invoke-WebRequest -Uri \"http://localhost:8000/\" -UseBasicParsing; \"PAGE STATUS: $\\($page.StatusCode\\)\"; if \\($page.Content -match \"AURA\"\\) { \"REACT APP SERVED: yes\" }; $body = '{\"messages\":[{\"role\":\"user\",\"content\":\"say hi in five words\"}]}'; $chat = Invoke-WebRequest -Uri \"http://localhost:8000/chat\" -Method Post -Body $body -ContentType \"application/json\" -UseBasicParsing; \"CHAT STREAM \\(first 200 chars\\): \" + $chat.Content.Substring\\(0, [Math]::Min\\(200, $chat.Content.Length\\)\\))",
+      "Bash(python -m uvicorn server:app --port 8000)",
+      "Bash(curl -s -o /dev/null -w \"PAGE STATUS: %{http_code}\\\\n\" http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s -X POST http://localhost:8000/chat -H \"Content-Type: application/json\" -d '{\"messages\":[{\"role\":\"user\",\"content\":\"say hi in five words\"}]}')",
+      "PowerShell($stage = \"C:\\\\Users\\\\revanth.raj\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--DEVELOPMENT-real-time--audio-in\\\\fbc0e574-cc43-46e8-b419-24c65c1762d0\\\\scratchpad\\\\voice-assistant\"; New-Item -ItemType Directory -Force \"$stage\\\\frontend\" | Out-Null; $root = \"c:\\\\DEVELOPMENT\\\\real-time, audio-in\"; Copy-Item \"$root\\\\server.py\" $stage; Copy-Item \"$root\\\\requirements.txt\" $stage; Copy-Item \"$root\\\\README.md\" $stage; Copy-Item \"$root\\\\.gitignore\" $stage; Copy-Item \"$root\\\\.env.example\" $stage; Copy-Item \"$root\\\\frontend\\\\index.html\" \"$stage\\\\frontend\"; Copy-Item \"$root\\\\frontend\\\\package.json\" \"$stage\\\\frontend\"; Copy-Item \"$root\\\\frontend\\\\package-lock.json\" \"$stage\\\\frontend\"; Copy-Item \"$root\\\\frontend\\\\vite.config.js\" \"$stage\\\\frontend\"; Copy-Item \"$root\\\\frontend\\\\public\" \"$stage\\\\frontend\\\\public\" -Recurse; Copy-Item \"$root\\\\frontend\\\\src\" \"$stage\\\\frontend\\\\src\" -Recurse; Get-ChildItem $stage -Recurse -File | Select-Object -ExpandProperty FullName)"
+    ]
+  }
+}

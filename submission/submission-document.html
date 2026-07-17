@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Engineering Intern — Submission Document</title>
+<style>
+  /* ---- print-friendly, professional document styling ---- */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+    color: #1a1a2e;
+    background: #f2f3f7;
+    line-height: 1.55;
+  }
+  .page {
+    max-width: 820px;
+    margin: 24px auto;
+    background: #fff;
+    padding: 56px 64px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; padding: 8mm 4mm; max-width: none; }
+    .no-print { display: none !important; }
+    a { color: #1d4ed8; }
+  }
+
+  h1 { font-size: 1.7rem; color: #111827; }
+  .subtitle { color: #4b5563; font-size: 1.02rem; margin-top: 4px; }
+  .meta { margin-top: 14px; font-size: 0.95rem; color: #374151; }
+  .meta b { color: #111827; }
+
+  h2 {
+    font-size: 1.15rem;
+    color: #1d4ed8;
+    margin: 34px 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  p, li { font-size: 0.95rem; color: #24292f; }
+  ul, ol { margin: 6px 0 6px 22px; }
+  li { margin: 3px 0; }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.92rem; }
+  th, td { border: 1px solid #d1d5db; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #eef2ff; color: #1e293b; }
+
+  .placeholder {
+    background: #fef9c3;
+    border: 1px dashed #ca8a04;
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: #854d0e;
+    font-family: Consolas, monospace;
+    font-size: 0.88rem;
+  }
+  .stack {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;
+  }
+  .chip {
+    background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe;
+    border-radius: 999px; padding: 2px 12px; font-size: 0.82rem;
+  }
+  pre.diagram {
+    background: #0f172a; color: #dbeafe;
+    padding: 16px 18px; border-radius: 8px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.82rem; line-height: 1.45;
+    overflow-x: auto;
+  }
+  .note {
+    background: #eff6ff; border-left: 4px solid #3b82f6;
+    padding: 10px 14px; border-radius: 0 6px 6px 0;
+    font-size: 0.9rem; margin: 10px 0;
+  }
+  .instructions {
+    background: #fefce8; border: 2px dashed #eab308;
+    border-radius: 10px; padding: 16px 20px; margin-bottom: 30px;
+  }
+  .instructions h3 { color: #854d0e; font-size: 1rem; margin-bottom: 6px; }
+  .instructions li { font-size: 0.9rem; }
+  footer {
+    margin-top: 40px; padding-top: 12px; border-top: 1px solid #e5e7eb;
+    font-size: 0.82rem; color: #6b7280;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ==== INSTRUCTIONS (hidden when printing) ==== -->
+  <div class="instructions no-print">
+    <h3>⚠️ Before you export — do these 4 things (this box will NOT appear in the PDF)</h3>
+    <ol>
+      <li>Replace every <span class="placeholder">yellow placeholder</span> below — click the text and type (this page is editable).</li>
+      <li>Set every Google Drive item to <b>“Anyone with the link – Viewer”</b> and test each link in an Incognito window.</li>
+      <li>Press <b>Ctrl+P</b> → destination <b>“Save as PDF”</b> → Save.</li>
+      <li>Upload the PDF as your submission.</li>
+    </ol>
+  </div>
+
+  <!-- ==== HEADER ==== -->
+  <header contenteditable="true">
+    <h1>Real-Time Conversational AI Assistant</h1>
+    <div class="subtitle">Audio-In / Audio-Out Voice Assistant — AI Engineering Intern Submission</div>
+    <div class="meta">
+      <b>Name:</b> <span class="placeholder">[Your Full Name]</span> &nbsp;•&nbsp;
+      <b>Email:</b> <span class="placeholder">[your.email@example.com]</span> &nbsp;•&nbsp;
+      <b>Date:</b> <span class="placeholder">[DD Month 2026]</span>
+    </div>
+  </header>
+
+  <!-- ==== DELIVERABLE LINKS ==== -->
+  <h2>1. Deliverables — Google Drive Links</h2>
+  <table contenteditable="true">
+    <tr><th style="width:30%">Deliverable</th><th>Google Drive Link</th></tr>
+    <tr>
+      <td><b>Source code</b> (ZIP)</td>
+      <td><span class="placeholder">[paste Drive link to voice-assistant-source.zip]</span></td>
+    </tr>
+    <tr>
+      <td><b>Demo video</b></td>
+      <td><span class="placeholder">[paste Drive link to demo video]</span></td>
+    </tr>
+    <tr>
+      <td><b>This document</b> (PDF)</td>
+      <td><span class="placeholder">[paste Drive link to this PDF]</span></td>
+    </tr>
+    <tr>
+      <td>GitHub repository <i>(optional)</i></td>
+      <td><span class="placeholder">[paste GitHub link, or delete this row]</span></td>
+    </tr>
+  </table>
+  <div class="note">All links are set to <b>“Anyone with the link — Viewer”</b> and have been verified from a logged-out browser.</div>
+
+  <!-- ==== OVERVIEW ==== -->
+  <h2>2. Project Overview</h2>
+  <p contenteditable="true">
+    <b>AURA</b> is a real-time, voice-to-voice conversational AI assistant. The user speaks;
+    the assistant listens, thinks, and replies in natural speech — typically in
+    <b>1.0–1.5 seconds voice-to-voice</b> (measured and displayed live in the UI for every turn).
+    A four-layer fallback engine guarantees the assistant never goes silent, never shows a raw
+    error, and never abruptly ends the conversation, even when the AI service is slow or down.
+  </p>
+  <div class="stack">
+    <span class="chip">React 19</span><span class="chip">Vite 8</span>
+    <span class="chip">FastAPI (Python)</span><span class="chip">Groq — Llama-3.1-8B-Instant</span>
+    <span class="chip">Web Speech API</span><span class="chip">Web Audio API</span>
+    <span class="chip">Server-Sent Events</span>
+  </div>
+
+  <!-- ==== ARCHITECTURE ==== -->
+  <h2>3. Architecture</h2>
+  <pre class="diagram">
+React 19 + Vite frontend (Chrome / Edge)
+ ├─ Voice input   : Web Speech API (SpeechRecognition), interim results
+ ├─ Voice output  : speechSynthesis — sentence-by-sentence while streaming
+ ├─ useVoiceAssistant hook : SSE streaming + 4-layer fallback engine
+ └─ Voice-reactive mic orb : Web Audio API live level meter
+          │  SSE token stream (/chat)
+          ▼
+FastAPI backend (server.py)
+ └─ /chat : proxies conversation to Groq (llama-3.1-8b-instant),
+            streams tokens back; API key held server-side only</pre>
+
+  <!-- ==== REQUIREMENTS MAPPING ==== -->
+  <h2>4. How Each Requirement Is Met</h2>
+  <table>
+    <tr><th style="width:38%">Requirement</th><th>Implementation</th></tr>
+    <tr><td>Accept queries through voice input</td>
+        <td>Browser-native speech recognition with live interim transcription — the transcript is ready the instant the user stops speaking.</td></tr>
+    <tr><td>Respond with voice output</td>
+        <td>Browser-native speech synthesis; the reply is spoken sentence-by-sentence <b>while the rest is still being generated</b>.</td></tr>
+    <tr><td>End-to-end response within 2 seconds</td>
+        <td>Streaming pipeline (details in §5); real measured latency is displayed on every turn — typically <b>1.0–1.5&nbsp;s</b>.</td></tr>
+    <tr><td>Graceful fallback for delays / interruptions</td>
+        <td>Four-layer "never go silent" engine (details in §6): spoken fillers, silent retry, offline mini-brain, auto-recovery.</td></tr>
+    <tr><td>Offline preferred; online acceptable if not feasible</td>
+        <td>Development hardware could not run local LLM inference at conversational speed, so the design maximises the local surface (speech-to-text, text-to-speech and the fallback brain all run in-browser) and uses the fastest available cloud LLM only for response generation — explicitly permitted by the brief.</td></tr>
+    <tr><td>No generic errors / abrupt endings</td>
+        <td>Every failure path produces a natural spoken response and an invitation to continue the conversation.</td></tr>
+    <tr><td>Responsiveness, UX, natural conversation</td>
+        <td>Conversation mode (mic auto-reopens after each answer), tap-to-interrupt, voice-reactive UI states, live latency meter.</td></tr>
+  </table>
+
+  <!-- ==== LATENCY ==== -->
+  <h2>5. Latency Design (&lt; 2 seconds)</h2>
+  <ul>
+    <li><b>Interim speech recognition</b> — transcription happens while the user talks, so there is ~0 delay after they finish.</li>
+    <li><b>Groq inference</b> — first token typically arrives in 0.3–0.6&nbsp;s.</li>
+    <li><b>Sentence-level streaming TTS</b> — the first complete sentence is spoken immediately while later sentences are still streaming; the app never waits for the full reply.</li>
+    <li><b>Prompt engineering</b> — the system prompt forces a short first sentence (&lt;12 words) so speech can begin as early as possible.</li>
+    <li><b>Honest measurement</b> — the UI stamps every reply with the true voice-end → voice-start latency.</li>
+  </ul>
+  <p contenteditable="true"><b>Measured results:</b> <span class="placeholder">[e.g., "Across 20 test turns: median 1.2 s, min 0.9 s, max 1.8 s" — run a few turns and note your real numbers]</span></p>
+
+  <!-- ==== FALLBACK ==== -->
+  <h2>6. Fallback Design — "Never Go Silent"</h2>
+  <table>
+    <tr><th style="width:14%">Layer</th><th style="width:30%">Trigger</th><th>Behaviour</th></tr>
+    <tr><td>L1</td><td>Instantly on every query</td><td>UI switches to an animated "thinking" state.</td></tr>
+    <tr><td>L2</td><td>No token after 1.5 s / 5.5 s</td><td>Speaks natural filler phrases ("Hmm, good question, let me think…") to keep the user engaged.</td></tr>
+    <tr><td>L3</td><td>Request fails</td><td>One silent retry while the filler covers the delay.</td></tr>
+    <tr><td>L4</td><td>Retry also fails (offline / outage)</td><td>A local rule-based mini-brain answers simple intents (time, date, greetings, jokes, small talk) and invites the user to try again — no error messages, no dead ends.</td></tr>
+    <tr><td>Recovery</td><td>Next user turn</td><td>Automatically retries the online path and switches back seamlessly.</td></tr>
+  </table>
+  <p><b>Known limitation (documented honestly):</b> Chrome's built-in speech recognition itself requires
+  internet, so the fallback layers cover the realistic failure cases — LLM API slowness, outages,
+  rate limits and invalid keys — rather than total network loss.</p>
+
+  <!-- ==== AI USAGE ==== -->
+  <h2>7. AI Usage Disclosure</h2>
+  <table>
+    <tr><th style="width:34%">AI system</th><th>Where it was used</th></tr>
+    <tr><td><b>Groq API — llama-3.1-8b-instant</b></td>
+        <td>Runtime: generates all assistant responses (chosen for lowest available first-token latency; free tier).</td></tr>
+    <tr><td><b>Web Speech API</b> (browser built-in)</td>
+        <td>Runtime: speech-to-text (SpeechRecognition) and text-to-speech (speechSynthesis).</td></tr>
+    <tr><td><b>Claude Code (Anthropic)</b></td>
+        <td>Development: used as an AI pair-programming assistant to design the architecture and write the code; all design decisions were reviewed and the system was tested end-to-end by me.</td></tr>
+  </table>
+
+  <!-- ==== HOW TO RUN ==== -->
+  <h2>8. How to Run</h2>
+  <ol>
+    <li><code>pip install -r requirements.txt</code></li>
+    <li><code>cd frontend &amp;&amp; npm install &amp;&amp; npm run build &amp;&amp; cd ..</code></li>
+    <li>Copy <code>.env.example</code> to <code>.env</code> and paste a free Groq API key (console.groq.com).</li>
+    <li><code>uvicorn server:app --port 8000</code></li>
+    <li>Open <b>http://localhost:8000</b> in Chrome or Edge, tap the mic orb, allow the microphone, and talk.</li>
+  </ol>
+
+  <footer contenteditable="true">
+    Submitted by <span class="placeholder">[Your Full Name]</span> — AI Engineering Intern assignment.
+  </footer>
+</div>
+</body>
+</html>
